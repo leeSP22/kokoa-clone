@@ -1,0 +1,34 @@
+.fa-exclamation-circle {
+    color: tomato;
+}
+
+.fa-comment-alt {
+    color: #2e363e;
+}
+
+.more_icons_section {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 35px;
+    margin-top: 25px;
+}
+
+.icons_section__icon {
+    position: relative;
+}
+.icons_section__icon .alarm-mini-dot{
+position: absolute;
+right: 10px;
+top: -5px;
+}
+
+.more-suggestions {
+    margin-top: 50px;
+    border-top: var(--border-line);
+    padding-top: 40px;
+}
+
+.more-suggestions_title {
+    font-weight: 600;
+    margin-bottom: 30px;
+}

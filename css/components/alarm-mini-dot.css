@@ -1,0 +1,7 @@
+.alarm-mini-dot {
+    display: flex;
+    height: 5px;
+    width: 5px;
+    background-color: tomato;
+    border-radius: 50%;
+}
