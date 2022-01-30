@@ -15,7 +15,7 @@
 .main-chat {
     display: flex;
     padding: 0px 25px;
-padding-top: 130px;
+margin-top: 120px;
 flex-direction: column;
 position: relative;
 }
@@ -87,7 +87,7 @@ padding: 0px 5px;
 
 .chat__me {
  position: absolute;
-right: 0px;
+right: 15px;
 bottom: -160px;
 }
 
@@ -103,6 +103,11 @@ bottom: -160px;
     border-top-right-radius: 0px;
     padding: 10px;
 }
+.fa-rocket {
+    position: absolute;
+    top:0;
+    left:0;
+}
 
 .reply {
     position: fixed;
@@ -114,6 +119,7 @@ bottom: -160px;
     padding: 5px 25px;
     align-items: center;
     box-sizing: border-box;
+    transition: all 0.3s ease-in-out;
 }
 .reply .reply__column:first-child {
     width: 10%;
@@ -132,6 +138,7 @@ bottom: -160px;
     width: 100%;
     border:var(--border-line);
     border-radius: 20px;
+    transition: all .3s ease-in-out;
 }
 .reply__column:last-child > i,
 .reply__column:last-child button {
@@ -158,4 +165,68 @@ bottom: -160px;
 .reply__column button:focus,
 .reply__column button:active {
     outline: none;
+}
+
+@keyframes Roket {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+#roket_animation-screen {
+    background-color: #7e7ec9;
+    position: absolute;
+    height:100vh;
+    width: 100vw;
+    top:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 80px;
+    animation: Roket 0.5s ease-in-out forwards;
+    animation-delay: 1s;
+}
+
+@keyframes roketMove {
+    from{
+        transform:translate3d(100px, 500px, -100px);
+    }
+    to {
+        transform:translate3d(500px, -100px, -100px);
+    }
+
+}
+
+#roket_animation-screen .fa-rocket {
+    animation: roketMove 1s ease-in-out forwards;
+}
+
+
+.reply:focus-within .reply__column:first-child {
+    opacity: 0;
+    visibility: hidden;
+}
+.reply .reply__column:first-child,
+.reply .fa-smile,
+.reply button {
+    transition: opacity 0.3s ease-in-out;
+}
+
+.reply:focus-within .fa-smile,
+.reply:focus-within button {
+    opacity: 0;
+}
+
+
+.reply:focus-within input {
+    width: 90vw;
+    transform:translateX(-12%) translateY(-80px);
+}
+
+.reply:focus-within {
+  transform: translateY(80px);
 }

@@ -28,5 +28,20 @@
     position:absolute;
     top: -5px;
     right: -6px;
+}
 
+@keyframes rotateCog {
+    0% {
+        transform: none;
+    }
+    50% {
+        opacity: 0.3;
+    }
+    100% {
+        transform: none;
+    }
+}
+
+.screen-header__cog:hover {
+    animation: rotateCog 0.5s linear infinite;
 }

@@ -131,3 +131,26 @@
 .open-chat__room__photo__heart i {
     margin: 3px;
 }
+
+@keyframes heartBeat{
+    0%{
+        color: white;
+        transform: none;
+    }
+
+    50%{
+        color: tomato;
+        transform:scale(2);
+    }
+
+    100%{
+        color: white;
+        transform: none;
+
+    }
+}
+
+.open-chat__room__photo__heart:hover i {
+    will-change: transform;
+    animation: heartBeat 1s linear infinite;
+}
